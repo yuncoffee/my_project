@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+$sy-black: #333;
+$bgColor: transparent;
+$textColor: transparent;
+// font
+@mixin font(
+  $fontSize: 1rem,
+  $lineHeight: 1.5em,
+  $letterSpacing: -0.02em,
+  $fontWeight: 500,
+  $color: $sy-black
+) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  font-weight: $fontWeight;
+  color: $color;
+}
+
+@mixin clear {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+//margin
+@mixin margin($var...) {
+  margin: $var;
+}
+
+//padding
+@mixin padding($var...) {
+  padding: $var;
+}
+
+// word-break
+@mixin ellipsis($width) {
+  width: $width;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin ellipsis2($line, $width, $height) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  width: $width;
+  height: $height;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+// center modal
+@mixin position($x, $y, $z, $width) {
+  position: absolute;
+  left: $x;
+  top: $y;
+  z-index: $z;
+  width: $width;
+  @if $x == 50% and $y == 50% {
+    transform: translate(-50%, -50%);
+  } @else if $y == 50% {
+    transform: translateY(-50%);
+  } @else if $x == 50% {
+    transform: translateX(-50%);
+  }
+}
+
+@mixin btn($width: auto, $fontSize: 1rem) {
+  width: $width;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $fontSize;
+  cursor: pointer;
+}
+
+@mixin colors($bgColor: "transparent", $textColor: "transparent") {
+  background-color: $bgColor;
+  color: $textColor;
+}
+
+@mixin border($bgColor, $lineWiehgt) {
+  border: {
+    color: $bgColor;
+    style: solid;
+    width: $lineWiehgt;
+  }
+}
+
+.btn2 {
+  @include btn(auto, 2.4rem);
+  @include padding(1em 2em);
+  @include margin(0 auto);
+  max-width: 140px;
+  @include colors(null, #565656);
+  @include border(rgb(190, 49, 49), 10px);
+}
+
+.btn {
+  @include btn(auto, 2.4rem);
+  @include padding(1em 2em);
+  @include margin(0 auto);
+  max-width: 140px;
+  background-color: #333;
+  color: #333;
+}
+
+h1 {
+  @include font(2.4rem, 1.5em, -0.02em, 700);
+  @include padding(10em 20em);
+  @include margin(0 auto);
+}
+
+h2 {
+  @include font();
+}
+
+h3 {
+  @include font();
+}
