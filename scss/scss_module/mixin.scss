@@ -1,8 +1,15 @@
 @charset "utf-8";
+@import "color.scss";
 
-$sy-black: #333;
-$bgColor: transparent;
-$textColor: transparent;
+@mixin clear {
+  &:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+  }
+}
+
 // font
 @mixin font(
   $fontSize: 1rem,
@@ -18,14 +25,6 @@ $textColor: transparent;
   color: $color;
 }
 
-@mixin clear {
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
-
 //margin
 @mixin margin($var...) {
   margin: $var;
@@ -34,6 +33,14 @@ $textColor: transparent;
 //padding
 @mixin padding($var...) {
   padding: $var;
+}
+
+@mixin radius($var...) {
+  border-radius: $var;
+}
+
+@mixin border($var1, $var2, $var3) {
+  border: $var1 $var2 $var3;
 }
 
 // word-break
@@ -73,54 +80,22 @@ $textColor: transparent;
 
 @mixin btn($width: auto, $fontSize: 1rem) {
   width: $width;
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: $fontSize;
   cursor: pointer;
+  display: inline-flex;
 }
 
-@mixin colors($bgColor: "transparent", $textColor: "transparent") {
+@mixin colors($bgColor: transparent, $textColor: transparent) {
   background-color: $bgColor;
   color: $textColor;
 }
 
-@mixin border($bgColor, $lineWiehgt) {
-  border: {
-    color: $bgColor;
-    style: solid;
-    width: $lineWiehgt;
+@mixin transition($duration: 0.5s, $delay: 0, $timing: ease-in) {
+  transition: {
+    duration: $duration;
+    delay: $delay;
+    timing-function: $timing;
   }
-}
-
-.btn2 {
-  @include btn(auto, 2.4rem);
-  @include padding(1em 2em);
-  @include margin(0 auto);
-  max-width: 140px;
-  @include colors(null, #565656);
-  @include border(rgb(190, 49, 49), 10px);
-}
-
-.btn {
-  @include btn(auto, 2.4rem);
-  @include padding(1em 2em);
-  @include margin(0 auto);
-  max-width: 140px;
-  background-color: #333;
-  color: #333;
-}
-
-h1 {
-  @include font(2.4rem, 1.5em, -0.02em, 700);
-  @include padding(10em 20em);
-  @include margin(0 auto);
-}
-
-h2 {
-  @include font();
-}
-
-h3 {
-  @include font();
 }

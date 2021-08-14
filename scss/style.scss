@@ -1,0 +1,9 @@
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+@import "scss_module/color.scss";
+@import "scss_module/mixin.scss";
+@import "scss_module/font.scss";
+@import "scss_module/btn.scss";

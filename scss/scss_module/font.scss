@@ -1,0 +1,29 @@
+@import "mixin.scss";
+
+// font(fontSize,lineHeight,letterSpacing,fontWeignt,color)
+// padding(top, left, bottom, right)
+// margin(top, left, bottom, right)
+
+h1 {
+  @include font(3.2rem, 1.5em, -0.02em, 900);
+}
+
+h2 {
+  @include font(2.4rem, 1.5em, -0.02em, 700);
+}
+
+h3 {
+  @include font(2rem, 1.5em, -0.02em, 700);
+}
+
+h4 {
+  @include font(1.6rem, 1.5em, -0.02em, 500);
+}
+
+h5 {
+  @include font(1.4rem, 1.5em, -0.02em, 400);
+}
+
+h6 {
+  @include font(1.2rem, 1.5em, -0.02em, 400);
+}
