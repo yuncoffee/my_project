@@ -35,8 +35,12 @@ function addEvent(){
   nextBtn.addEventListener('click', 콜백함수());
 };
 
-
+// console.log(prevBtn.offsetWidth);
 
 // container.style.transform = translateX(4000);
 
 // container.style.transform = `translateX(${direction * (100 / 요소의 갯수)}%)`;
+
+// console.log('ㅎㅇ!');
+
+// document.write('안녕하세요!');

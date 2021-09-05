@@ -21,7 +21,7 @@ a {
   @include margin(0 auto);
   @include colors($sy-pri, #fff);
   @include border(2px, solid, transparent);
-  @include transition($timing: ease-in-out);
+  @include transition($duration: 0.2s);
   transition-property: opacity, color, background, border;
   min-width: 40px;
   font-weight: 500;
@@ -30,7 +30,7 @@ a {
     @include colors($sy-gray5, $sy-gray2);
   }
   &:focus {
-    @include border(1px, solid, $sy-pri);
+    // @include border(1px, solid, $sy-pri);
   }
 }
 
@@ -118,4 +118,7 @@ a {
 
 .btn-warning {
   @include colors(#ef5050, #f8f8f8);
+  @include bgImg($position: right);
+  background-image: url();
+  @include flex();
 }

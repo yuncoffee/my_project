@@ -31,12 +31,12 @@ a:link, a:visited, a:hover, a:active {
   background-color: #0068d7;
   color: #fff;
   border: 2px solid transparent;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   -webkit-transition-delay: 0;
           transition-delay: 0;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
   -webkit-transition-property: opacity, color, background, border;
   transition-property: opacity, color, background, border;
   min-width: 40px;
@@ -46,10 +46,6 @@ a:link, a:visited, a:hover, a:active {
 .btn:disabled, .btn:disabled:hover {
   background-color: #c4c4c4;
   color: #424242;
-}
-
-.btn:focus {
-  border: 1px solid #0068d7;
 }
 
 .btn-block {
@@ -146,4 +142,11 @@ a:link, a:visited, a:hover, a:active {
 .btn-warning {
   background-color: #ef5050;
   color: #f8f8f8;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url();
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }

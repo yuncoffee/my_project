@@ -61,10 +61,7 @@ a {
   outline: none;
 }
 
-a:link,
-a:visited,
-a:hover,
-a:active {
+a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
@@ -81,22 +78,17 @@ a:active {
   background-color: #0068d7;
   color: #fff;
   border: 2px solid transparent;
-  transition-duration: 0.5s;
+  transition-duration: 0.2s;
   transition-delay: 0;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in;
   transition-property: opacity, color, background, border;
   min-width: 40px;
   font-weight: 500;
 }
 
-.btn:disabled,
-.btn:disabled:hover {
+.btn:disabled, .btn:disabled:hover {
   background-color: #c4c4c4;
   color: #424242;
-}
-
-.btn:focus {
-  border: 1px solid #0068d7;
 }
 
 .btn-block {
@@ -104,41 +96,8 @@ a:active {
   color: #fff;
 }
 
-.btn-block:hover,
-.btn-block:active {
+.btn-block:hover, .btn-block:active {
   background-color: #0068d7;
-}
-
-.btn-warning {
-  background-color: #ef5050;
-  color: #f8f8f8;
-}
-
-.btn-hover {
-  background-color: #0068d7;
-  color: #fff;
-  opacity: 0.7;
-}
-
-.btn-hover:hover,
-.btn-hover:active {
-  background-color: #0068d7;
-  opacity: 1;
-}
-
-.btn-lineHover {
-  background-color: transparent;
-  color: #0068d7;
-  border-color: #0068d7;
-  opacity: 0.7;
-}
-
-.btn-lineHover:hover,
-.btn-lineHover:active {
-  background-color: #0068d7;
-  color: #fff;
-  border-color: transparent;
-  opacity: 1;
 }
 
 .btn-line {
@@ -170,6 +129,31 @@ a:active {
   border-color: transparent;
 }
 
+.btn-hover {
+  background-color: #0068d7;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.btn-hover:hover, .btn-hover:active {
+  background-color: #0068d7;
+  opacity: 1;
+}
+
+.btn-lineHover {
+  background-color: transparent;
+  color: #0068d7;
+  border-color: #0068d7;
+  opacity: 0.7;
+}
+
+.btn-lineHover:hover, .btn-lineHover:active {
+  background-color: #0068d7;
+  color: #fff;
+  border-color: transparent;
+  opacity: 1;
+}
+
 .btn-blockRoundHover {
   background-color: #0068d7;
   color: #fff;
@@ -178,8 +162,7 @@ a:active {
   opacity: 0.7;
 }
 
-.btn-blockRoundHover:hover,
-.btn-blockRoundHover:active {
+.btn-blockRoundHover:hover, .btn-blockRoundHover:active {
   border-color: #0068d7;
   opacity: 1;
 }
@@ -192,10 +175,36 @@ a:active {
   opacity: 0.7;
 }
 
-.btn-lineRoundHover:hover,
-.btn-lineRoundHover:active {
+.btn-lineRoundHover:hover, .btn-lineRoundHover:active {
   background-color: #0068d7;
   color: #fff;
   border-color: transparent;
   opacity: 1;
+}
+
+.btn-warning {
+  background-color: #ef5050;
+  color: #f8f8f8;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url();
+  flex: 1 1 auto;
+}
+
+.a11y-hidden-bg {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
 }

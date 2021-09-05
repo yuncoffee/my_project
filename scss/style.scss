@@ -7,3 +7,26 @@ html {
 @import "scss_module/mixin.scss";
 @import "scss_module/font.scss";
 @import "scss_module/btn.scss";
+
+
+// 접근성 hidden
+.a11y-hidden-bg {
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.a11y-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	-webkit-clip-path: polygon(0 0, 0 0, 0 0);
+	        clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+%btn{
+  @extend 
+}

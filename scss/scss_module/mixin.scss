@@ -99,3 +99,21 @@
     timing-function: $timing;
   }
 }
+
+@mixin bgImg(
+  $position: (
+    center center,
+  ),
+  $size: contain,
+  $repeat: no-repeat
+) {
+  background: {
+    position: $position;
+    size: $size;
+    repeat: $repeat;
+  }
+}
+
+@mixin flex($var:(1 1 auto)) {
+  flex: $var;
+}
