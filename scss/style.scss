@@ -3,10 +3,10 @@ html {
   box-sizing: border-box;
 }
 
-@import "scss_module/color.scss";
-@import "scss_module/mixin.scss";
-@import "scss_module/font.scss";
-@import "scss_module/btn.scss";
+@import "scss_module/_variables.scss";
+@import "scss_module/_mixin.scss";
+@import "scss_module/_font.scss";
+@import "scss_module/_btn.scss";
 
 
 // 접근성 hidden
@@ -27,6 +27,141 @@ html {
 	        clip-path: polygon(0 0, 0 0, 0 0);
 }
 
-%btn{
-  
+.container{
+	// margin-top: 1em;
+	// width: 100%;
+	// height: 40px;
+	// display: flex;
+	// justify-content: space-between;
+
+	.tab{
+		padding: 1em;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: 0.3s;
+	}
+
+	.tab:hover{
+		
+		color: #fff;
+	}
+}
+
+.section{
+	// background: chocolate;
+	width: 100%;
+}
+
+.deactivate{
+	display: none;
+}
+
+.tab:nth-child(2n + 1){
+	background: #242424;
+}
+
+.arcodian{
+	position: relative;
+	margin-top: 32px;
+	font-size: 1.4rem;
+	color: white;
+	background: rgba($color: $sy-pri, $alpha: 1.0);
+	
+	.arcodianHead{
+		padding: 12px 8px;
+		background: rgba($color: #242424, $alpha: 1.0);
+	}
+
+	.arcodianItemWrap{
+		overflow: hidden;
+		padding: 0;
+		transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+		transition-property: height	;
+		height: 0;
+
+		.arcodianItem{
+			padding: 8px 12px;
+		}
+
+	}
+
+	.arcodianItemWrap.active{
+		padding: 0;
+		height: auto;
+	}
+}
+
+
+a,
+a:hover,
+a:visited {
+	text-decoration: none;
+	color: #424242;
+}
+
+.container{
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+// card
+.card{
+	flex: 1 1 content;
+	position: relative;
+	width: calc(50% - 8px);
+	min-width: calc(50% - 8px);
+	background: #f2f2f2;
+	overflow: hidden;
+	border-radius: 4px;
+
+	
+	.wrap:hover{
+
+		img{
+			transform: scale(110%);
+		}
+	}
+
+	.wrap{
+		
+		.header{
+
+			.imgWrap{
+				width: 100%;
+				height: 200px;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				
+				img{
+					// width: -webkit-fill-available;
+					width: 100%;
+					height: 100%;
+					-o-object-fit: cover;
+					   object-fit: cover;
+					transition: 0.6s;
+				}
+			}
+		}
+
+		.body{
+			padding: 1.6em 0.8em;
+			.title{
+				font-size: 2.4rem;
+			}
+
+			.desc{
+				@include ellipsis2(2, 1.5em);
+				font-size: 1.6rem;
+
+			}
+		}
+	}
 }

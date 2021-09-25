@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .hiddenGroup{
+            display: none;
+        }
+
+        .hiddenGroup.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">item안에 innerHTML 생성</button>
+    <div class="container">
+        <div class="item">item</div>
+    </div>
+
+    <div class="container tabContainer">
+        <!-- <div class="tab">tabItem1</div>
+        <div class="tab">tabItem2</div>
+        <div class="tab">tabItem3</div>
+        <div class="tab">tabItem4</div> -->
+    </div>
+    <div class="container">
+        <section class="section">section1
+            <div class="change">ㅎㅇ</div>
+        </section>
+        <section class="section deactivate">section2</section>
+        <section class="section deactivate">section3</section>
+        <section class="section deactivate">section4</section>
+    </div>
+
+        <div class="div">
+            <h4 class="h4">상품제목</h4>
+            <p class="p">상품내용</p>
+        </div>
+        <form action="" class="container my-5">
+            <div class="form-group">
+                <p>상품선택</p>
+                <select class="form-control" id="option1">
+                    <option value="">모자</option>
+                    <option value="">셔츠</option>
+                </select>
+
+            <div class="hiddenGroup">
+                <p>사이즈 선택</p>
+                <select class="form-control" id="option2">
+                    <option value="">90</option>
+                    <option value="">95</option>
+                    <option value="">100</option>
+                    <option value="">105</option>
+                </select>
+            </div>
+
+            </div>
+        </form>
+
+        <div class="arcodian">
+            <div class="arcodianHead">
+                <div class="arcodianHeadWrap">Head</div>
+            </div>
+            <div class="arcodianItemWrap">
+                <div class="arcodianItem">item1</div>
+                <div class="arcodianItem">item1</div>
+                <div class="arcodianItem">item1</div>
+                <div class="arcodianItem">item1</div>
+                <div class="arcodianItem">item1</div>
+                <div class="arcodianItem">item1</div>
+                <div class="arcodianItem">item1</div>
+                
+            </div>
+        </div>
+
+    <script defer type="module">
+        import {} from '/js/interaction.js'
+        
+        let loading = new Promise(function(resolve,reject){
+        let img = document.querySelector('.arcodianHead')
+            img.addEventListener('load', function(){
+                reslove()
+            })
+
+            img.addEventListener('error', function(){
+                reject()
+            })
+        })
+        loading.then(function(){
+            console.log('로딩성공')
+        }).catch(function(){
+            console.log('로딩실패')
+        })
+
+</script>
+</body>
+</html>
